@@ -26,7 +26,6 @@ def dijkstra_shortest_path(graph, start, p={}, u=[], d={}):
 
 
 if __name__ == '__main__':
-    # инициализация графа с помощью словаря смежности
     a, b, c, d, e, f, g, h = range(8)
     N = [
         {b: 7, c: 9, f: 14},
@@ -38,8 +37,7 @@ if __name__ == '__main__':
         {h: 2},
         {g: 2},
     ]
-    for i in range(1):
-        print dijkstra_shortest_path(N, a)
+    print dijkstra_shortest_path(N, a)
 # b in N[a] - смежность
 # len(N[f]) - степень
 # N[a][b] - вес (a,b)

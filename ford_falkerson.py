@@ -66,20 +66,19 @@ class FordFalkersonSolver(object):
     return [x for index, [i, j, c, x] in enumerate(self.edges) if index % 2 == 0]
 
 if __name__ == '__main__':
-  inp = [
-    [0, 1, 4],
-    [0, 3, 9],
-    [1, 3, 2],
-    [1, 4, 4],
-    [2, 4, 1],
-    [2, 5, 10],
-    [3, 2, 1],
-    [3, 5, 6],
-    [4, 5, 1],
-    [4, 6, 2],
-    [5, 6, 9]
-  ]
-  s = 0
-  t = 6
-  n = 7
-  print FordFalkersonSolver(inp, n, s, t).solve().flow()
+    inp = [
+      [0, 1, 4],
+      [0, 3, 9],
+      [1, 3, 2],
+      [1, 4, 4],
+      [2, 4, 1],
+      [2, 5, 10],
+      [3, 2, 1],
+      [3, 5, 6],
+      [4, 5, 1],
+      [4, 6, 2],
+      [5, 6, 9]
+    ]
+    s, t, n = 0, 6, 7
+    print('Answer: {}'.format(FordFalkersonSolver(inp, n, s, t).solve().flow))
+    print('Must be: 10')

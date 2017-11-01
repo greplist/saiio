@@ -124,3 +124,28 @@ if __name__=="__main__":
 
     # res = [4, 0, 0, 0, 0, 6, 5, 1, 3]
     print MinCostFlowSolver(inp, n, basic_indexes, nonbasic_indexes).solve().get_x()
+
+    inp = [
+      [0, 1, 9, 2],
+      [0, 7, 5, 7],
+      [1, 2, 1, 4],
+      [1, 5, 3, 0],
+      [1, 6, 5, 3],
+      [2, 8, -2, 0],
+      [3, 2, -3, 0],
+      [4, 3, 6, 3],
+      [5, 4, 8, 4],
+      [6, 2, -1, 0],
+      [6, 3, 4, 0],
+      [6, 4, 7, 5],
+      [6, 8, 1, 0],
+      [7, 6, 2, 0],
+      [7, 8, 2, 0],
+      [8, 5, 6, 2]
+    ]
+    n = 9
+    basic_indexes = set([0, 2, 4, 8, 14, 16, 22, 30])
+    nonbasic_indexes = set([6, 10, 12, 18, 20, 24, 26, 28])
+
+    # must be [0, 9, 4, 1, 0, 0, 0, 0, 5, 0, 5, 1, 0, 2, 0, 1]
+    print MinCostFlowSolver(inp, n, basic_indexes, nonbasic_indexes).solve().get_x()
